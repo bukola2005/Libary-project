@@ -102,8 +102,13 @@ bookForm.addEventListener('submit', (event) => {
 }
 function restoreLocal()
 {
-
+    const savedLibrary = localStorage.getItem('mySavedLibrary');
+    if (savedLibrary) {
+        myLibrary = JSON.parse(savedLibrary);
+         displayBooks(); 
+    }
+   
 }
 
 restoreLocal();
-displayBooks();
+// displayBooks();
