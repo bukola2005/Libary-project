@@ -1,4 +1,4 @@
-const myLibrary = [
+let myLibrary = [
     {
         id : '1',
         title: 'the wonderfully world',
@@ -98,7 +98,7 @@ bookForm.addEventListener('submit', (event) => {
            
  function saveLocal(){
     const libraryString = JSON.stringify(myLibrary);
-    localStorage.setItem(mySavedLibrary,libraryString);
+    localStorage.setItem('mySavedLibrary',libraryString);
 }
 function restoreLocal()
 {
@@ -106,4 +106,4 @@ function restoreLocal()
 }
 
 restoreLocal();
-// displayBooks();
+displayBooks();
